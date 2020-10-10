@@ -32,8 +32,8 @@ func main() {
 
 	handleRequests()
 	db.Connect(testDb)
+	db.SyncTables()
 
 	fmt.Println("Server up at localhost:8000.")
 	http.ListenAndServe(":8000", nil)
-
 }
