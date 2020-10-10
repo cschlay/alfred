@@ -3,6 +3,8 @@ package main
 import (
     "fmt"
     "net/http"
+
+    "github.com/jackc/pgx/v4"
 )
 
 func homePage(w http.ResponseWriter, r *http.Request) {
