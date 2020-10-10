@@ -1,8 +1,8 @@
 ## Deployment
 
-Build it, replace `env` with `set` and put to separate lines  if using windows.
+Build it
 ```
-env GOOS=linux GOARCH=386 go build main.go
+docker-compose exec web env GOOS=linux GOARCH=386 go build -o bin/main main.go 
 ```
 
-Put the program to server and reverse proxy to `localhost:8000` .
+Put the program `main` to server, `chmod +x main` if not already and reverse proxy to `localhost:8000` .
