@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="207.154.198.194" id="7e8a2c53-2ab2-4962-9b44-aafbc79f55c5" keyPath="C:\Users\Chi-Hao Lay\.ssh\digitalocean" port="22" nameFormat="DESCRIPTIVE" username="cl" />
+    </configs>
+  </component>
+</project>

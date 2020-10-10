@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c6b985a8-ff0c-471e-b7fd-f97e25eebf6e" name="alfred" url="http://alfred.laych.dev">
+        <fileTransfer rootFolder="/home/cl" accessType="SFTP" host="207.154.198.194" port="22" sshConfigId="7e8a2c53-2ab2-4962-9b44-aafbc79f55c5" sshConfig="cl@207.154.198.194:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
