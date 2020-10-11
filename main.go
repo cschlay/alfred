@@ -19,8 +19,9 @@ func handleRequests() {
 	http.HandleFunc("/", homePage)
 }
 
-func testDb(conn *pgx.Conn) {
+func testDb(conn *pgx.Conn) bool {
 	fmt.Println("Database connection OK.")
+	return true
 }
 
 func main() {

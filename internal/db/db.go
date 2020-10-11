@@ -18,7 +18,7 @@ func getDbURL() string {
 	return dbURL
 }
 
-func Connect(onConnect func(*pgx.Conn)) {
+func Connect(onConnect func(*pgx.Conn) bool) bool {
 	dbURL := getDbURL()
 	conn, err := pgx.Connect(context.Background(), dbURL)
 	if err != nil {
@@ -26,7 +26,7 @@ func Connect(onConnect func(*pgx.Conn)) {
 		os.Exit(1)
 	}
 	defer conn.Close(context.Background())
-	onConnect(conn)
+	return onConnect(conn)
 }
 
 func ExecuteStatements(statements *[]string) {
@@ -43,7 +43,7 @@ func ExecuteStatement(statement string) {
 		os.Exit(1)
 	}
 	defer conn.Close(context.Background())
-	_, queryErr := conn.Query(context.Background(), statement)
+	_, queryErr := conn.Exec(context.Background(), statement)
 	if queryErr != nil {
 		fmt.Println(queryErr)
 	}
