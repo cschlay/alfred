@@ -14,6 +14,7 @@ import (
 
 func handleRequests() {
 	http.HandleFunc("/z0I1tzHowf0OkaKR/users", api.Users)
+	http.HandleFunc("/login", api.Login)
 }
 
 func testDb(conn *pgx.Conn) bool {
