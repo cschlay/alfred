@@ -15,6 +15,6 @@ func SyncTables() {
 
 func user() {
 	var sql []string
-	sql = append(sql, "CREATE TABLE IF NOT EXISTS account (id SERIAL, username VARCHAR(50), password VARCHAR(1000));")
+	sql = append(sql, "CREATE TABLE IF NOT EXISTS account (username VARCHAR(50) PRIMARY KEY, password VARCHAR(1000));")
 	ExecuteStatements(&sql)
 }
